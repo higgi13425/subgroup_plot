@@ -16,12 +16,22 @@ library(gridExtra)
 library(scales)
 ```
 
-## Getting Started
+## Getting Started with Subgroup Plots
 
+Subgroup plots are a bit of a fetish of medical journals, as a way to rummage through the results, hunting for possible subgroups which might receive more or less benefit than the average participant. 
+
+These subgroup analyses, are of course, underpowered, as you are dividing the sample size of the overall study (in which you can usually barely afford to get 80% power) into multiple (underpowered) subgroup analyses. To make matters worse, you are often (at the request of multiple reviewers and editors), analyzing 15-25 subgroups, resulting in a real problem of multiple comparisons, and occasionally yielding an outlier that looks significantly different from the overall effect, but is probably only so by chance.
+
+Many statisticians have weighed in on what a bad idea this practice is (examples provided [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068511/), [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC59592/), and [here](https://pubmed.ncbi.nlm.nih.gov/11701102/)). However, they are just **so much fun to look at** that journal editors, particularly in the UK and at the _New England Journal of Medicine_ are very reluctant to give them up.
+
+This has led to some spectacular statistical trolling, most famously in the [ISIS-1 study] published in the Lancet in 1988. The statisticians involved were very resistant
 
 ## Just Show Me the Code
 
 Here is code for a subgroup plot for a randomized controlled trial of 100 mg vs. 200 mg indomethacin in the prevention of post-ERCP pancreatitis. 
+
+The full paper, including figure 2 on page 137, which is the resulting plot (with some formatting/UK spellings added by journal staff), can be found at: https://github.com/higgi13425/subgroup_plot/blob/master/lancetgastro_2020_indomethacin.pdf
+
 
 ```{r all-code, eval=FALSE}
 #  subgroup diagram for Indomethacin RCT 100 v 200
